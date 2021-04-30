@@ -1,0 +1,22 @@
+CREATE TABLE killmails (
+   killmail_id varchar,
+   killmail_hash varchar,
+   date timestamptz,
+   data json,
+   value double precision,
+   PRIMARY KEY(killmail_id)
+);
+
+CREATE TABLE items (
+    item_id int,
+    value double precision,
+    date timestamptz,
+    PRIMARY KEY(item_id, date)
+);
+
+CREATE TABLE items_default (
+    item_id int,
+    value double precision,
+    updated timestamptz,
+    PRIMARY KEY(item_id)
+);
